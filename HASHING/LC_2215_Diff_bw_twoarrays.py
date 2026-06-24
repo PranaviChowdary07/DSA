@@ -1,3 +1,4 @@
+from typing import List
 class Solution:
     def findDifference(self, nums1: List[int], nums2: List[int]) -> List[List[int]]:
         num1set = set(nums1)
@@ -12,5 +13,6 @@ class Solution:
                 res2.add(n)
         return [list(res1),list(res2)]
 
-
+# from typing import List thisis used to run code in vscode,not use it shows list is not defined.
+# But in LC automatically import many common things.
         
