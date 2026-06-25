@@ -1,3 +1,6 @@
+# Find the majority element
+    # In this problem states only find majority element and this problems only exists one majority element because condition is  n//2
+
 from typing import List
 class Solution:
     def majorityElement(self, nums: List[int]) -> int:
@@ -7,5 +10,6 @@ class Solution:
                 freq[num]+1
             else:
                 freq[num]= 1
-            if freq[num]>n//2:
+            if freq[num]>len(nums)//2:
                 return num
+# Find the majority elements more than 1 condition is n//3
