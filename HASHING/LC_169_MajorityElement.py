@@ -12,6 +12,19 @@ class Solution:
                 freq[num]= 1
             if freq[num]>len(nums)//2:
                 return num
+#Optimal Solution (Boyer-Moore)
+class Solution:
+    def majorityElement(self, nums):
+        candidate = 0
+        count = 0
+        for num in nums:
+            if count == 0:
+                candidate = num
+            if num == candidate:
+                count += 1
+            else:
+                count -= 1
+        return candidate
 # Find the majority elements more than 1 condition is n//3
 class Solution:
     def majorityElement(self, nums):
