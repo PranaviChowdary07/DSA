@@ -13,3 +13,17 @@ class Solution:
             if freq[num]>len(nums)//2:
                 return num
 # Find the majority elements more than 1 condition is n//3
+class Solution:
+    def majorityElement(self, nums):
+        freq = {}
+        for num in nums:
+
+            if num in freq:
+                freq[num] += 1
+            else:
+                freq[num] = 1
+        res = []
+        for num in freq:
+            if freq[num] > len(nums) // 3:
+                res.append(num)
+        return res
