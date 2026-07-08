@@ -1,7 +1,6 @@
 # use two pointer
 class Solution:
-    def twoSum(self, numbers: List[int], target: int) -> List[int]:
-        left = 0
+    def twoSum(self, numbers, target) :
         right = len(numbers)-1
         while left < right:
             current_sum = numbers[left] + numbers[right]
